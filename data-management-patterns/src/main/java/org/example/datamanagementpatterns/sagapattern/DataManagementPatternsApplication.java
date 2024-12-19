@@ -1,11 +1,12 @@
 package org.example.datamanagementpatterns;
 
-import org.example.datamanagementpatterns.repository.OrderRepository;
-import org.example.datamanagementpatterns.saga.common.SagaManager;
 import org.example.datamanagementpatterns.saga.domain.Order;
+import org.example.datamanagementpatterns.saga.common.SagaManager;
+import org.example.datamanagementpatterns.repository.OrderRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,21 +17,19 @@ class DataManagementPatternsApplicationTests {
 	private SagaManager sagaManager;
 
 	@Autowired
-	private OrderRepository orderRepository;
-
-	@Autowired
 	private CreateOrderSaga createOrderSaga;
+
+	@MockBean
+	private OrderRepository orderRepository;  // Mocking the repository if not fully implemented
 
 	@Test
 	void testSuccessfulSaga() throws InterruptedException {
 		// Create a sample order
 		Order order = new Order(1L, "Pending", 100.00);
 
-		// Create the saga instance
-		createOrderSaga = new CreateOrderSaga(order);
-
 		// Simulate starting the saga
 		System.out.println("Starting the Saga...");
+		createOrderSaga = new CreateOrderSaga(order);
 		sagaManager.create(createOrderSaga);
 
 		// Simulate a successful order creation (commit)
@@ -47,17 +46,15 @@ class DataManagementPatternsApplicationTests {
 		// Create a sample order
 		Order order = new Order(2L, "Pending", 200.00);
 
-		// Create the saga instance
-		createOrderSaga = new CreateOrderSaga(order);
-
 		// Simulate starting the saga
 		System.out.println("Starting the Saga...");
+		createOrderSaga = new CreateOrderSaga(order);
 		sagaManager.create(createOrderSaga);
 
 		// Simulate a failure scenario
 		try {
 			System.out.println("Simulating Failure Scenario...");
-			throw new RuntimeException("Payment failed"); // Simulate payment failure
+			throw new RuntimeException("Payment failed");  // Simulate payment failure
 		} catch (RuntimeException e) {
 			System.out.println("Error during saga: " + e.getMessage());
 			sagaManager.rollback(createOrderSaga);  // Rollback the saga
