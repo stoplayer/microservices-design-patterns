@@ -1,7 +1,7 @@
-package org.example.securitypatterns.config;
+package org.example.securitypatterns.Jwtauth.config;
 
-import org.example.securitypatterns.service.JWTUtils;
-import org.example.securitypatterns.service.OurUserDetailsService;
+import org.example.securitypatterns.Jwtauth.service.JWTUtils;
+import org.example.securitypatterns.Jwtauth.service.OurUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

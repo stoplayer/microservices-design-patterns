@@ -1,4 +1,4 @@
-package org.example.securitypatterns.entity;
+package org.example.securitypatterns.Jwtauth.entity;
 
 
 import jakarta.persistence.*;

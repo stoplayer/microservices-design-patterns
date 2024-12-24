@@ -1,6 +1,6 @@
-package org.example.securitypatterns.repository;
+package org.example.securitypatterns.Jwtauth.repository;
 
-import org.example.securitypatterns.entity.OurUsers;
+import org.example.securitypatterns.Jwtauth.entity.OurUsers;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

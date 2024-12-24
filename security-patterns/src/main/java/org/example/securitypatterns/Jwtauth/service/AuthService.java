@@ -1,10 +1,10 @@
-package org.example.securitypatterns.service;
+package org.example.securitypatterns.Jwtauth.service;
 
 
 
-import org.example.securitypatterns.dto.ReqRes;
-import org.example.securitypatterns.entity.OurUsers;
-import org.example.securitypatterns.repository.OurUserRepo;
+import org.example.securitypatterns.Jwtauth.dto.ReqRes;
+import org.example.securitypatterns.Jwtauth.entity.OurUsers;
+import org.example.securitypatterns.Jwtauth.repository.OurUserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

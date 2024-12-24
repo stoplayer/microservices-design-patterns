@@ -1,4 +1,4 @@
-package org.example.securitypatterns.service;
+package org.example.securitypatterns.Jwtauth.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -1,13 +1,10 @@
-package org.example.securitypatterns.dto;
+package org.example.securitypatterns.Jwtauth.dto;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import org.example.securitypatterns.entity.OurUsers;
+import org.example.securitypatterns.Jwtauth.entity.OurUsers;
 import lombok.Data;
-
-import java.util.List;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
