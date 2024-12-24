@@ -1,9 +1,9 @@
-package org.example.securitypatterns.controller;
+package org.example.securitypatterns.Jwtauth.controller;
 
 
 
-import org.example.securitypatterns.dto.ReqRes;
-import org.example.securitypatterns.service.AuthService;
+import org.example.securitypatterns.Jwtauth.dto.ReqRes;
+import org.example.securitypatterns.Jwtauth.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
