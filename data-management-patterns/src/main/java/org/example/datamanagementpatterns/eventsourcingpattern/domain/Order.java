@@ -6,6 +6,7 @@ import org.example.datamanagementpatterns.eventsourcingpattern.event.OrderConfir
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Order {
     private Long id;
     private String status;
@@ -27,7 +28,6 @@ public class Order {
     }
 
     public void applyEvent(Event event) {
-        // Apply event logic (mutating the aggregate state)
         if (event instanceof OrderCreatedEvent) {
             this.status = "Created";
         } else if (event instanceof OrderConfirmedEvent) {

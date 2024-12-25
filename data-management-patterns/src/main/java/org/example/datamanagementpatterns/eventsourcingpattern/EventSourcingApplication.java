@@ -6,6 +6,7 @@ import org.example.datamanagementpatterns.eventsourcingpattern.event.OrderEventH
 import org.example.datamanagementpatterns.eventsourcingpattern.event.OrderEventStore;
 import org.example.datamanagementpatterns.eventsourcingpattern.common.Event;
 
+@SpringBootTest
 public class EventSourcingApplication {
 
     public static void main(String[] args) {

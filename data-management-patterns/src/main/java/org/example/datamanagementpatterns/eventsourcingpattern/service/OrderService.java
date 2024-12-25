@@ -1,6 +1,8 @@
 package org.example.datamanagementpatterns.eventsourcingpattern.service;
 
-import org.example.datamanagementpatterns.eventsourcingpattern.domain.Order;
+import org.example.datamanagementpatterns.domain.Order;
+import org.example.datamanagementpatterns.domain.OrderDTO;
+
 import org.example.datamanagementpatterns.eventsourcingpattern.repository.OrderRepository;
 
 public class OrderService {
