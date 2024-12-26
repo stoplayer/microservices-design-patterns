@@ -22,7 +22,7 @@
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-dependencies</artifactId>
-				<version>3.1.0</version> <!-- Update to the latest stable Spring Boot version -->
+				<version>3.1.0</version> <!-- Updated to the latest stable Spring Boot version -->
 				<scope>import</scope>
 				<type>pom</type>
 			</dependency>
@@ -103,6 +103,34 @@
 			<artifactId>axon-spring-boot-starter</artifactId>
 			<version>4.5.3</version> <!-- Specify version for Axon Framework -->
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -122,7 +150,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>3.1.0</version> <!-- Added version for Spring Boot Maven Plugin -->
+				<version>3.1.0</version> <!-- Updated version for Spring Boot Maven Plugin -->
 			</plugin>
 		</plugins>
 	</build>
