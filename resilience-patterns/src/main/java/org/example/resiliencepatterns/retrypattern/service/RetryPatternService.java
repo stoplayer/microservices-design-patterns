@@ -1,26 +1,50 @@
 package org.example.resiliencepatterns.retrypattern.service;
 
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.Recover;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.charset.StandardCharsets;
+import java.util.HashMap;
 import java.util.Map;
 
 @Service
 public class RetryPatternService {
 
-    @Retryable(value = {IOException.class}, maxAttempts = 3, backoff = @Backoff(delay = 2000))
+    private static final String PATTERN_BASE_FOLDER = "C:\\School-projects\\microservices-design-patterns\\resilience-patterns\\src\\main\\java\\org\\example\\resiliencepatterns";
     public Map<String, String> getPatternFiles(String patternName) throws IOException {
-        // Simulate a transient failure
-        if (Math.random() > 0.7) {
-            throw new IOException("Temporary failure - Please try again.");
+        Map<String, String> filesContent = new HashMap<>();
+
+        // Base folder for the design pattern
+        Path patternFolder = Paths.get(PATTERN_BASE_FOLDER, patternName);
+
+        // List of files to read
+        String[] fileNames = {
+                "controller/RetryController.java",
+                "service/RetryService.java",
+                "config/RetryPatternConfig.java",
+        };
+
+        for (String fileName : fileNames) {
+            // Construct the full path for the file
+            Path filePath = patternFolder.resolve(fileName);
+            System.out.println("Trying to load file: " + filePath.toAbsolutePath());
+            System.out.println("Current Working Directory: " + Paths.get("").toAbsolutePath());
+
+            // Check if the file exists and read its content
+            if (Files.exists(filePath)) {
+                String content = Files.readString(filePath, StandardCharsets.UTF_8);
+                filesContent.put(fileName, content);
+            } else {
+                throw new IOException("File not found: " + filePath.toAbsolutePath());
+            }
         }
 
-        // Mock pattern file content
-        return Map.of("RetryPattern.java", "public class RetryPattern { /* Implementation */ }");
-    }
-
-    @Recover
-    public Map<String, String> recover(IOException e, String patternName) {
-        return Map.of("error", "Failed to fetch pattern files after multiple attempts: " + e.getMessage());
+        return filesContent;
     }
 }

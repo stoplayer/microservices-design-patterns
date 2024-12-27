@@ -1,5 +1,6 @@
 package org.example.resiliencepatterns.retrypattern.controller;
 
+import org.example.resiliencepatterns.retrypattern.service.RetryPatternService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
