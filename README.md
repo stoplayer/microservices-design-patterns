@@ -5,14 +5,6 @@
 
 ---
 
-## Auteurs
-Wail El Aboudi, Yassine Amal, El Yazid El Merzouki, Ahmed Warid, Nouhaila Ghoulam
-
-## Licence
-MIT
-
----
-
 ## Mots-clés
 Patrons de Conception, Microservices, Spring Boot, Architecture Logicielle, Chatbot
 
@@ -102,6 +94,11 @@ Offre une interface utilisateur intuitive :
 ### Exploration des Patrons
 - Recherche de patrons spécifiques (ex. : Rate Limiting, Circuit Breaker).
 - Explications détaillées et implémentations prêtes à l’emploi.
+
+---
+
+## Démonstration Vidéo
+*(Espace réservé pour inclure la vidéo de démonstration ultérieurement.)*
 
 ---
 
