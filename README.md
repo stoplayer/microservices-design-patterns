@@ -1,7 +1,7 @@
 # Bibliothèque de Patrons de Conception pour Microservices : Améliorer les Systèmes Distribués avec des Solutions Standardisées
 
 ## Diagramme d’Architecture Logicielle
-![Diagramme de l'Architecture Logicielle](https://github.com/user-attachments/assets/255b751b-231d-4ba4-a24e-a7ef90727edc)
+![Diagramme de l'Architecture Logicielle](https://github.com/user-attachments/assets/2799ea3b-0fe1-4118-954f-f56bd20380fe)
 
 ---
 
