@@ -30,7 +30,7 @@ v1.0.0
 - OpenAI API
 
 ### Frontend
-- ReactJs
+- ReactJs  https://github.com/Dizay1957/designpatternlib
 - Bootstrap
 - Tailwind
 
