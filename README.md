@@ -98,7 +98,7 @@ Offre une interface utilisateur intuitive :
 ---
 
 ## Démonstration Vidéo
-*(Espace réservé pour inclure la vidéo de démonstration ultérieurement.)*
+https://github.com/user-attachments/assets/bf1347a8-7f3f-47e7-a6b7-12b907376e47
 
 ---
 
