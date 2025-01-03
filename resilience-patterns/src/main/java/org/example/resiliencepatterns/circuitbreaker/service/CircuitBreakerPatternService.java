@@ -14,7 +14,7 @@ import java.util.Map;
 @Service
 public class CircuitBreakerPatternService {
 
-    private static final String PATTERN_BASE_FOLDER = "C:\\School-projects\\microservices-design-patterns\\resilience-patterns\\src\\main\\java\\org\\example\\resiliencepatterns";
+    private static final String PATTERN_BASE_FOLDER = "D:\\My data file\\studies\\5 MG\\S1\\Architecture des composants d'entreprise\\Patron de conception microservices\\Code\\Backend\\microservices-design-patterns\\resilience-patterns\\src\\main\\java\\org\\example\\resiliencepatterns";
     public Map<String, String> getPatternFiles(String patternName) throws IOException {
         Map<String, String> filesContent = new HashMap<>();
 

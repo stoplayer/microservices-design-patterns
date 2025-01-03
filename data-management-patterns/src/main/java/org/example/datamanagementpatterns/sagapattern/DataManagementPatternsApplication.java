@@ -1,4 +1,4 @@
-package org.example.datamanagementpatterns;
+package org.example.datamanagementpatterns.sagapattern;
 
 import org.example.datamanagementpatterns.saga.domain.Order;
 import org.example.datamanagementpatterns.saga.common.SagaManager;

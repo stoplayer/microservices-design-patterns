@@ -1,5 +1,7 @@
 package org.example.datamanagementpatterns.eventsourcingpattern.domain;
 
+import jakarta.persistence.Entity;
+import org.example.datamanagementpatterns.eventsourcingpattern.common.Event;
 import org.example.datamanagementpatterns.eventsourcingpattern.event.OrderCreatedEvent;
 import org.example.datamanagementpatterns.eventsourcingpattern.event.OrderConfirmedEvent;
 

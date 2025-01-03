@@ -1,4 +1,4 @@
-package org.example.datamanagementpatterns;
+package org.example.datamanagementpatterns.eventsourcingpattern;
 
 import org.example.datamanagementpatterns.eventsourcingpattern.event.OrderCreatedEvent;
 import org.example.datamanagementpatterns.eventsourcingpattern.event.OrderConfirmedEvent;

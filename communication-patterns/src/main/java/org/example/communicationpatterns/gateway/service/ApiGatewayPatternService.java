@@ -12,11 +12,12 @@ import java.util.Map;
 @Service
 public class ApiGatewayPatternService {
 
-    private static final String PATTERN_BASE_FOLDER = "\\Users\\mac\\Desktop\\microservices-design-patterns\\communication-patterns\\src\\main\\java\\org\\example\\communicationpatterns\\";
+    private static final String PATTERN_BASE_FOLDER = "D:\\My data file\\studies\\5 MG\\S1\\Architecture des composants d'entreprise\\Patron de conception microservices\\Code\\Backend\\microservices-design-patterns\\communication-patterns\\src\\main\\java\\org\\example\\communicationpatterns\\";
 
     public Map<String, String> getPatternFiles(String patternName) throws IOException {
         Map<String, String> filesContent = new HashMap<>();
 
+        // Correct file paths by including the patternName in the base folder
         String[] fileNames = {
                 "config/GatewayConfig.java",
                 "controller/ApiGatewayController.java",
@@ -25,7 +26,8 @@ public class ApiGatewayPatternService {
         };
 
         for (String fileName : fileNames) {
-            String filePath = PATTERN_BASE_FOLDER + fileName;
+            // Construct the file path by including the patternName directory
+            String filePath = PATTERN_BASE_FOLDER + patternName + "/" + fileName;
             System.out.println("Checking file path: " + filePath);
 
             if (!Files.exists(Paths.get(filePath))) {
@@ -42,10 +44,5 @@ public class ApiGatewayPatternService {
         }
 
         return filesContent;
-    }
-
-
-    private String loadFileContent(String filePath) throws IOException {
-        return Files.readString(Paths.get(filePath), StandardCharsets.UTF_8);
     }
 }

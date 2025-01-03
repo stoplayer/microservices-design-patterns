@@ -1,4 +1,4 @@
-package org.example.patterns.eventsourcing.service;
+package org.example.datamanagementpatterns.eventsourcingpattern.service;
 
 import org.springframework.stereotype.Service;
 
